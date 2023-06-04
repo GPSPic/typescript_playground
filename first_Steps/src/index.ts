@@ -8,8 +8,8 @@ class Point {
         return this._x;
     }
 
-    set x(value: number) {
-        if (value < 0) {
+    set x(value: number | undefined) {
+        if (value === undefined || value < 0) {
             throw Error("Value needs to be above 0")
         }
         this._x = value;
